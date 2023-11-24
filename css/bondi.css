@@ -1,0 +1,169 @@
+:root {
+  --dark-color: #19283f;
+  --green-color: #33d1cc;
+  --green-color-alt: rgba(51, 209, 204, 75%);
+  --red-color: #ff3150;
+  --yellow-color: #ffc400;
+  --section-color: #eff7fa;
+  --white-color: #fff;
+  --main-transition: 0.4s;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  height: 5000px;
+}
+.main-btn {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+  padding: 0.5rem 1rem;
+  transition: var(--main-transition);
+}
+.main-btn:hover {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+}
+.main-title::after {
+  content: "";
+  background-color: var(--green-color);
+  width: 120px;
+  height: 2px;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* ==================== START NAVBAR ==================== */
+.navbar {
+  background-color: var(--dark-color);
+  font-weight: 500;
+}
+.navbar .navbar-nav .nav-link {
+  color: var(--white-color);
+  transition: var(--main-transition);
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--green-color);
+}
+.navbar .search {
+  border-left: 1px solid var(--green-color);
+  cursor: pointer;
+}
+.navbar .search svg {
+  color: var(--green-color);
+}
+.navbar .navbar-toggler {
+  color: var(--white-color);
+  border-color: var(--white-color);
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"] {
+  color: var(--green-color);
+  border-color: var(--green-color);
+}
+/* ==================== END NAVBAR ==================== */
+/* ================== START LANDING ================== */
+.landing {
+  background-color: var(--dark-color);
+  min-height: calc(100vh - 70px);
+}
+/* ================== END LANDING ================== */
+/* ================== START FEATURES ================== */
+.features .feat .icon-holder {
+  height: 200px;
+}
+.features .feat .icon-holder svg {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.features .feat .icon-holder .number {
+  font-size: 12rem;
+  color: var(--section-color);
+}
+.features .feat .icon-holder .icon {
+  bottom: 0;
+  color: var(--green-color);
+}
+.features .feat h4 {
+  color: var(--yellow-color);
+}
+/* ================== END FEATURES ================== */
+/* ================== START OUR WORK ================== */
+.our-work {
+  background-color: var(--section-color);
+}
+.our-work ul .active {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+  border-color: var(--red-color);
+  transition: var(--main-transition);
+}
+.our-work ul li {
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.our-work ul li:not(.active):hover {
+  color: var(--red-color);
+}
+.our-work ul .active:hover {
+  opacity: 0.9;
+}
+.our-work .box {
+  padding: 5px;
+  overflow: hidden;
+}
+.our-work .box::before {
+  content: attr(data-work);
+  position: absolute;
+  background-color: var(--green-color-alt);
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white-color);
+  font-size: 1.4rem;
+  font-weight: bold;
+  transform: translateX(calc(-100% - 5px));
+  transition: var(--main-transition);
+}
+.our-work .box:hover::before {
+  transform: translateX(0);
+}
+/* ================== END OUR WORK ================== */
+/* ================== START STUFF ================== */
+.stuff .desc {
+  max-width: 450px;
+  border-bottom: 1px solid #ddd;
+}
+/* ==================  END STUFF  ================== */
+/* ================== START TEAM ================== */
+.team {
+  background-color: var(--section-color);
+}
+.team h2 {
+  color: var(--yellow-color);
+}
+.team h4 {
+  background-color: var(--green-color);
+}
+/* ==================  END TEAM  ================== */
+.project {
+  background-color: var(--dark-color);
+}
+.blog .box {
+  border: 1px solid #ddd;
+}
+.blog .box img {
+  border-radius: 4px 4px 0 0;
+  z-index: 0;
+}
+.blog .box .text {
+  z-index: 1;
+}
+.rad-6 {
+  border-radius: 4px;
+}
