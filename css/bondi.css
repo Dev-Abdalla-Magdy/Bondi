@@ -1,3 +1,4 @@
+/* ==================== START MAIN STYLE ==================== */
 :root {
   --dark-color: #19283f;
   --green-color: #33d1cc;
@@ -8,9 +9,17 @@
   --white-color: #fff;
   --main-transition: 0.4s;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Roboto", sans-serif;
   height: 5000px;
+}
+li,
+a,
+button {
+  cursor: pointer;
 }
 .main-btn {
   background-color: var(--red-color);
@@ -32,6 +41,8 @@ body {
   left: 50%;
   transform: translateX(-50%);
 }
+/* ==================== END MAIN STYLE ==================== */
+
 /* ==================== START NAVBAR ==================== */
 .navbar {
   background-color: var(--dark-color);
@@ -65,12 +76,14 @@ body {
   border-color: var(--green-color);
 }
 /* ==================== END NAVBAR ==================== */
+
 /* ================== START LANDING ================== */
 .landing {
   background-color: var(--dark-color);
   min-height: calc(100vh - 70px);
 }
 /* ================== END LANDING ================== */
+
 /* ================== START FEATURES ================== */
 .features .feat .icon-holder {
   height: 200px;
@@ -91,6 +104,7 @@ body {
   color: var(--yellow-color);
 }
 /* ================== END FEATURES ================== */
+
 /* ================== START OUR WORK ================== */
 .our-work {
   background-color: var(--section-color);
@@ -134,12 +148,14 @@ body {
   transform: translateX(0);
 }
 /* ================== END OUR WORK ================== */
+
 /* ================== START STUFF ================== */
 .stuff .desc {
   max-width: 450px;
   border-bottom: 1px solid #ddd;
 }
 /* ==================  END STUFF  ================== */
+
 /* ================== START TEAM ================== */
 .team {
   background-color: var(--section-color);
@@ -151,6 +167,8 @@ body {
   background-color: var(--green-color);
 }
 /* ==================  END TEAM  ================== */
+
+/* ================== START PROJECTS ================== */
 .project {
   background-color: var(--dark-color);
 }
@@ -167,3 +185,75 @@ body {
 .rad-6 {
   border-radius: 4px;
 }
+/* ==================  END PROJECTS  ================== */
+
+/* ================== START SUBSCRIBE ================== */
+.subscribe {
+  background-color: var(--yellow-color);
+}
+.subscribe input[type="text"] {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--white-color);
+  background-color: transparent;
+}
+.subscribe input[type="text"]::placeholder {
+  color: var(--white-color);
+}
+.subscribe input[type="submit"] {
+  background-color: var(--dark-color);
+  color: var(--yellow-color);
+}
+.subscribe .sub-p p {
+  margin-bottom: 0;
+}
+@media (max-width: 991px) {
+  .subscribe input[type="text"] {
+    margin-bottom: 20px;
+  }
+  .subscribe .sub-p {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .subscribe input[type="submit"] {
+    width: 100%;
+  }
+}
+/* ==================  END SUBSCRIBE  ================== */
+
+/* ================== START FOOTER ================== */
+.footer {
+  background-color: var(--dark-color);
+}
+.social svg {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.facebook {
+  background-color: #1877f2;
+}
+.twitter {
+  background-color: #1da1f2;
+}
+.linkedin {
+  background-color: #0a66c2;
+}
+.github {
+  background-color: #333;
+}
+.youtube {
+  background-color: #ff0000;
+}
+.copyright {
+  padding-top: 20px;
+  border-top: 1px solid #aaa;
+}
+.dev {
+  color: var(--yellow-color);
+}
+.brand {
+  color: var(--green-color);
+}
+/* ==================  END FOOTER  ================== */
